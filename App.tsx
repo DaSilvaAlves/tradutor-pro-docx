@@ -200,21 +200,9 @@ const App: React.FC = () => {
   const progressPercent = batches.length > 0 ? Math.round((completedCount / batches.length) * 100) : 0;
 
   return (
-    <div className="min-h-screen bg-[#050608] text-slate-300 font-sans selection:bg-orange-500/30 relative">
-      {/* Imagem de Fundo Elite - Caminho Absoluto via Public */}
-      <div 
-        className="fixed inset-0 z-0 pointer-events-none opacity-[0.06] grayscale brightness-[0.4]" 
-        style={{ 
-          backgroundImage: 'url("/capa.png")', 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }} 
-      />
-
-      <div className="relative z-10">
-        {/* Header Premium */}
-        <header className="w-full border-b border-white/5 bg-[#0a0c10]/80 backdrop-blur-xl sticky top-0 z-50">
+    <div className="min-h-screen text-slate-300 font-sans selection:bg-orange-500/30 relative z-10">
+      {/* Header Premium */}
+      <header className="w-full border-b border-white/5 bg-[#0a0c10]/80 backdrop-blur-xl sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-tr from-orange-600 to-amber-400 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-900/20">
