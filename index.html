@@ -5,14 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal Prof. Ruben Filipe - Tradutor de Elite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         background-color: #050608;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        color: #cbd5e1;
+        font-family: sans-serif;
       }
-      /* Fundo Elite Imparável */
       #elite-background {
         position: fixed;
         inset: 0;
@@ -25,18 +27,13 @@
         background-position: center;
         background-repeat: no-repeat;
       }
-      /* Estilos de Elite para Scrollbar e Animações */
-      @keyframes progress-indeterminate {
-        0% { transform: translateX(-100%); width: 30%; }
-        100% { transform: translateX(400%); width: 30%; }
-      }
-      .animate-progress-indeterminate {
-        animation: progress-indeterminate 1.2s infinite linear;
-      }
       .custom-scrollbar::-webkit-scrollbar { width: 5px; }
       .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
       .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 20px; }
       .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 0.2); }
+      
+      /* Garantir que o input escondido não aparece como botão feio */
+      .hidden-input { display: none !important; }
     </style>
   </head>
   <body>
