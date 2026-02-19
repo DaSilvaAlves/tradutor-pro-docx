@@ -13,27 +13,31 @@
         padding: 0;
         overflow-x: hidden;
         color: #cbd5e1;
-        font-family: sans-serif;
+        font-family: 'Inter', sans-serif;
       }
       #elite-background {
         position: fixed;
         inset: 0;
         z-index: -1;
         pointer-events: none;
-        opacity: 0.06;
-        filter: grayscale(100%) brightness(40%);
+        opacity: 0.12; /* Aumentado para ser visível com classe */
+        filter: grayscale(50%) brightness(50%);
         background-image: url("/capa.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
-      .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+      .custom-scrollbar::-webkit-scrollbar { width: 4px; }
       .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 20px; }
-      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 0.2); }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.2); border-radius: 20px; }
       
-      /* Garantir que o input escondido não aparece como botão feio */
-      .hidden-input { display: none !important; }
+      @keyframes progress-loading {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(200%); }
+      }
+      .animate-loading {
+        animation: progress-loading 1.5s infinite linear;
+      }
     </style>
   </head>
   <body>
