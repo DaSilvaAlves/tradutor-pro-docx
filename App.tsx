@@ -4,9 +4,6 @@ import { translateTextWithGroq } from './core-app/infrastructure/services/groq';
 import { splitTextIntoChunks, downloadAsFile } from './core-app/infrastructure/services/utils/text-processing';
 import { TranslationStatus, FileData } from './types';
 
-// Import da imagem de capa para o Vite processar
-import capaImage from './capa.png';
-
 declare global {
   interface Window {
     mammoth: any;
@@ -204,11 +201,11 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#050608] text-slate-300 font-sans selection:bg-orange-500/30 relative">
-      {/* Imagem de Fundo Elite */}
+      {/* Imagem de Fundo Elite - Caminho Absoluto via Public */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none opacity-[0.06] grayscale brightness-[0.4]" 
         style={{ 
-          backgroundImage: `url(${capaImage})`, 
+          backgroundImage: 'url("/capa.png")', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -233,7 +230,7 @@ const App: React.FC = () => {
                 <ShieldCheck className="w-3 h-3" /> AGENTE IA ACTIVO
               </div>
               <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-400 text-[10px] font-black tracking-widest">
-                v6.1 ELITE BG
+                v6.2 FINAL
               </div>
             </div>
           </div>
