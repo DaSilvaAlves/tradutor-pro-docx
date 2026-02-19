@@ -10,6 +10,7 @@
         background-color: #050608;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
       }
       /* Fundo Elite Imparável */
       #elite-background {
@@ -24,6 +25,18 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+      /* Estilos de Elite para Scrollbar e Animações */
+      @keyframes progress-indeterminate {
+        0% { transform: translateX(-100%); width: 30%; }
+        100% { transform: translateX(400%); width: 30%; }
+      }
+      .animate-progress-indeterminate {
+        animation: progress-indeterminate 1.2s infinite linear;
+      }
+      .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 20px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 0.2); }
     </style>
   </head>
   <body>
